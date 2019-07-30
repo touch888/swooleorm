@@ -8,5 +8,9 @@ namespace Swoole\Orm;
  */
 class Model
 {
-    //put your code here
+
+    public function __construct()
+    {
+        var_dump(123);
+    }
 }
