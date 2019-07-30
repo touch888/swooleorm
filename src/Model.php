@@ -1,5 +1,5 @@
 <?php
-namespace Orm;
+namespace Swoole\Orm;
 
 /**
  * Description of Model
