@@ -2,6 +2,6 @@
     "name": "swoole/orm",
     "type": "library",
     "license": "MIT",
-    "require": {},
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {}
 }
