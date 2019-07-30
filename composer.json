@@ -1,0 +1,6 @@
+{
+    "name": "swoole/orm",
+    "type": "library",
+    "license": "MIT",
+    "require": {}
+}
