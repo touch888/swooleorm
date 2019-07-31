@@ -9,8 +9,10 @@ namespace Swoole\Orm;
 class Model
 {
 
+    use DBTrait;
+
     public function __construct()
     {
-        var_dump(123);
+        $this->initialize();
     }
 }
