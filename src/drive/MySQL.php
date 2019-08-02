@@ -22,7 +22,7 @@ class MySQL
         return $coroutineMySQL;
     }
 
-    public function __wakeup()
+    private function __wakeup()
     {
         $this->connect();
     }
