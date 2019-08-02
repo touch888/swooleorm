@@ -20,7 +20,6 @@ class Adapter
 
     private $adaptee;
     private $configuration;
-    private static $instance;
 
     public function __construct()
     {
