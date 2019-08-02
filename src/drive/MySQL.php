@@ -21,4 +21,9 @@ class MySQL
         $coroutineMySQL->connect($config);
         return $coroutineMySQL;
     }
+
+    public function __wakeup()
+    {
+        $this->connect();
+    }
 }
