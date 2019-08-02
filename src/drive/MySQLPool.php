@@ -92,4 +92,25 @@ class MySQLPool
     {
         return $this->pool->isFull();
     }
+
+    /**
+     * 构造函数中设定的容量会保存在此，不过如果设定的容量小于1则此变量会等于1
+     * @return int
+     */
+    final public function getCapacity(): int
+    {
+        return $this->pool->capacity;
+    }
+
+    /**
+     * Coroutine\Channel->$errCode
+      默认成功 0 (SWOOLE_CHANNEL_OK)
+      超时 pop失败时(超时)会置为-1 (SWOOLE_CHANNEL_TIMEOUT)
+      channel已关闭,继续操作channel，设置错误码 -2 ( SWOOLE_CHANNEL_CLOSED)
+     * @return int
+     */
+    final public function getErrCode(): int
+    {
+        return $this->pool->errCode;
+    }
 }
