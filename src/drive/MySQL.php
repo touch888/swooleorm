@@ -1,6 +1,10 @@
 <?php
 namespace Swoole\Orm\Drive;
 
+use Swoole\Orm\Database;
+use Swoole\Orm\Drive\MySQLTrait;
+use Swoole\Coroutine\MySQL as CoroutineMySQL;
+
 /**
  * Description of MySQL
  *
@@ -8,5 +12,13 @@ namespace Swoole\Orm\Drive;
  */
 class MySQL
 {
-    //put your code here
+
+    //use MySQLTrait;
+
+    public function connect($config)
+    {
+        $coroutineMySQL = new CoroutineMySQL();
+        $coroutineMySQL->connect($config);
+        return $coroutineMySQL;
+    }
 }

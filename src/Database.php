@@ -11,8 +11,8 @@ namespace Swoole\Orm;
  *
  * @author touch
  */
-interface Database
+abstract class Database
 {
 
-    public function connect();
+    abstract public function connect();
 }
