@@ -22,7 +22,7 @@ class Adapter
     private $configuration;
     private static $instance;
 
-    private function __construct()
+    public function __construct()
     {
         $config = Config::getInstance();
         if (empty($config)) {
@@ -46,16 +46,8 @@ class Adapter
         }
     }
 
-    private function connect()
+    public function connect()
     {
         return $this->adaptee->connect($this->configuration);
-    }
-
-    public static function getInstance()
-    {
-        if (!(self::$instance instanceof self)) {
-            self::$instance = new self();
-        }
-        return self::$instance->connect();
     }
 }

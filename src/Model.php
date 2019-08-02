@@ -15,7 +15,8 @@ class Model
 
     public function __construct()
     {
-        $this->pool = Adapter::getInstance();
+        //$this->pool = Adapter::getInstance();
+        $this->pool = (new Adapter())->connect();
     }
 
     public function getName()
@@ -25,8 +26,10 @@ class Model
 //            var_dump($this->pool->channelLenth());
 //            $this->pool->put($db);
 //        }
-        var_dump($this->pool->isFull());
-        var_dump($this->pool->get());
-        $this->pool;
+        $db = $this->pool->get();
+        var_dump($db->query('select version()'));
+        var_dump($this->pool->poolLenth());
+//        var_dump($this->pool->get());
+        //$this->pool->put($db);
     }
 }
